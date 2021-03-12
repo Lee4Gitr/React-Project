@@ -21,6 +21,7 @@ export default function ProductListing() {
   let [productList, setProductList] = useState<ProductList>({products:[]})
   useEffect(() => {
     getProducts().then(res => {
+      console.log(res.data)
       setProductList(res.data)
     });
   }, []);
@@ -31,8 +32,7 @@ export default function ProductListing() {
       <TableCaption>Products</TableCaption>
       <Thead>
         <Tr>
-          <Th>Purchase</Th>
-          <Th>Code</Th>
+          <Th>Details</Th>
           <Th>Name</Th>
           <Th>Description</Th>
           <Th isNumeric>Cost</Th>
@@ -44,8 +44,7 @@ export default function ProductListing() {
           productList.products.map((product, i) => (
 
             <Tr key={i}>
-              <Td><Link as={RouterLink} to={`/product/${product.code}`}>Purchase</Link></Td>
-              <Td>{product.code}</Td>
+              <Td><Link as={RouterLink} to={`/product/${product.code}`}>Details</Link></Td>
               <Td>{product.name}</Td>
               <Td>{product.description}</Td>
               <Td>{product.cost}</Td>
@@ -58,7 +57,6 @@ export default function ProductListing() {
       <Tfoot>
         <Tr>
           <Th>Purchase</Th>
-          <Th>Code</Th>
           <Th>Name</Th>
           <Th>Description</Th>
           <Th isNumeric>Cost</Th>
