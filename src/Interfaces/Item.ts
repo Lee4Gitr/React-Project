@@ -1,12 +1,11 @@
-import Code from "./Code";
 import ProductType from "./ProductType";
 import Category from "./Category";
 
 export default interface Item {
   name: string;
-  code: Code;
+  code: number;
   productType: ProductType;
-  cost: Number;
+  cost: string;
   description: string;
   pushedProduct: boolean;
   callback: string;

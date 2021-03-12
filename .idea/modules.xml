@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/medi-weightloss.iml" filepath="$PROJECT_DIR$/.idea/medi-weightloss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../medi-weightloss-backend/.idea/medi-weightloss-backend.iml" filepath="$PROJECT_DIR$/../medi-weightloss-backend/.idea/medi-weightloss-backend.iml" />
     </modules>
   </component>
 </project>
