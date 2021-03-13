@@ -1,5 +1,9 @@
 import React from "react";
 
+interface Props {
+  code: number;
+}
+
 const PurchaseProduct = () => {
 
   return (

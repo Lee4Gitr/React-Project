@@ -21,7 +21,6 @@ export default function ProductListing() {
   let [productList, setProductList] = useState<ProductList>({products:[]})
   useEffect(() => {
     getProducts().then(res => {
-      console.log(res.data)
       setProductList(res.data)
     });
   }, []);
