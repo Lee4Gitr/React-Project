@@ -1,7 +1,8 @@
-import {Button, Link, LinkOverlay, Stack} from "@chakra-ui/react";
+import {Button, Link, Stack} from "@chakra-ui/react";
 import React from "react";
 import Product from "../Interfaces/Product";
 import {Link as RouterLink} from "react-router-dom";
+
 
 
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
 const PurchaseButtons = (props: Props) => {
   return (
     <Stack direction="row" spacing={4} align="center">
-      <Link as={RouterLink} to={`/purchase`}>
+      <Link as={RouterLink} to={{pathname: `/purchase`, state: props.product}}>
         <Button colorScheme="teal" variant="solid">
           Purchase {props.product.name}
         </Button>
@@ -21,10 +22,6 @@ const PurchaseButtons = (props: Props) => {
           Back
         </Button>
       </Link>
-      {/*Implement Later*/}
-      <Button isDisabled={true} colorScheme="teal" variant="outline">
-        Add to Cart
-      </Button>
     </Stack>
   )
 }

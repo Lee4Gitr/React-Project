@@ -6,5 +6,5 @@ interface address {
   street: string;
   city: string;
   state: string;
-  zip: Number;
+  zip: number;
 }
